@@ -16,7 +16,6 @@ const App = () => {
     <div className="App">
       <Header />
       <TypingTest onResults={handleResults} />
-      {testResults && <Results speed={testResults.typingSpeed} accuracy={testResults.accuracy} />}
       <ProgressChart />
       <Footer />
     </div>

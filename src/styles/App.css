@@ -1,60 +1,178 @@
-
 body {
-    background-color: #f8f9fa;
-    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
-.header {
+header {
     text-align: center;
-    margin: 20px 0;
     padding: 20px;
-    background-color: #007bff;
+    background-color: #4a90e2;
     color: white;
     border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
 }
 
 .typing-test {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 30px auto;
     padding: 20px;
     background-color: white;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.typing-test textarea {
+.typing-test h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #4a90e2;
+}
+
+.typing-test .form-group {
+    margin-bottom: 20px;
+}
+
+.typing-test label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.typing-test select {
     width: 100%;
-    height: 150px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
+.typing-test p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Updated textarea styling with difficulty-based colors */
+.typing-test textarea {
+    width: 95%;
+    height: 200px; /* Increased height for better usability */
+    padding: 15px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif; /* Ensures consistent font */
+    color: #333; /* Text color for better readability */
+    background-color: #fefefe; /* Slightly brighter background */
+    border: 3px solid #ccc; /* Thicker border for better visibility */
+    border-radius: 10px; /* More rounded corners */
+    resize: vertical; /* Allows vertical resizing only */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth focus effect */
+}
+
+.typing-test textarea:focus {
+    border-color: #4a90e2; /* Highlight border on focus */
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.5); /* Glow effect */
+    outline: none; /* Removes default outline */
+}
+
+/* Difficulty-based color coding */
+.typing-test textarea.easy {
+    border-color: #28a745; /* Green for easy */
+}
+
+.typing-test textarea.moderate {
+    border-color: #ffc107; /* Orange for moderate */
+}
+
+.typing-test textarea.difficult {
+    border-color: #dc3545; /* Red for difficult */
+}
+
 .results {
     text-align: center;
-    margin: 20px 0;
-    padding: 10px;
-    background-color: #e9ecef;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #eaf4fc;
+    border-radius: 8px;
+    border: 1px solid #cce7f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.results h3 {
+    font-size: 1.5rem;
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+
+.results p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.results button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #4a90e2;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.results button:hover {
+    background-color: #357ab8;
 }
 
 .progress-chart {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 30px auto;
     padding: 20px;
     background-color: white;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.footer {
+.progress-chart h2 {
     text-align: center;
-    margin: 20px 0;
-    padding: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #4a90e2;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
     background-color: #343a40;
     color: white;
     border-radius: 5px;
+    margin-top: 30px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+footer p:first-child {
+    font-weight: bold;
 }
